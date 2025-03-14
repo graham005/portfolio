@@ -6,7 +6,7 @@ return (
         <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-8 text-center">Get In Touch</h2>
             <div className="mb-8 text-center">
-                <p>Get in touch or shoot me an email directly on <a href="mailto:enochgraham003@gmail.com" className="text-blue-500">enochgraham003@gmail.com</a></p>
+                <p>Get in touch or shoot me an email directly on <a href="mailto:enochgraham003@outlook.com" className="text-blue-500">enochgraham003@outlook.com</a></p>
             </div>
 
             <form className="max-w-md mx-auto">
