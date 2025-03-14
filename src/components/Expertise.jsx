@@ -6,7 +6,7 @@ function Expertise() {
   return (
     <section id='expertise' className='flex justify-center items-center text-white h-screen py-20 md:py-24 lg:py-32' style={{ backgroundColor: '#030014' }}>
         <div className='container mx-auto px-4 text-center'>
-            <h1 className='text-5xl font-bold mb-8 p-2'>My Expertise</h1>
+            <h1 className='text-5xl font-bold mb-8 p-3'>My Expertise</h1>
             <div className='flex flex-col md:flex-row gap-10 border border-white rounded-md p-5 shadow-md w-full mx-auto py-10'>
                 <div className='md:w-1/3 p-5'>
                     <div className='flex justify-center mb-4'>
