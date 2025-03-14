@@ -9,12 +9,12 @@ function Hero() {
       backgroundPosition: 'center',
     }}>
         <div className='container mx-auto text-center'>
-            <h1 className='font-bold mb-5 text-[100px] leading-[120px]' style={{ fontFamily: 'Poppins, sans-serif' }}>ENOCH GRAHAM</h1>
-            <p className='text-3xl' style={{ fontFamily: 'Roboto Mono, monospace' }}>SOFTWARE ENGINEER, BACKEND & APP DEVELOPER.</p>
+            <h1 className='font-bold mb-5 text-4xl md:text-6xl lg:text-8xl xl:text-[100px] leading-tight md:leading-snug lg:leading-normal xl:leading-[120px]' style={{ fontFamily: 'Poppins, sans-serif' }}>ENOCH GRAHAM</h1>
+            <p className='text-xl md:text-2xl lg:text-3xl' style={{ fontFamily: 'Roboto Mono, monospace' }}>SOFTWARE ENGINEER, BACKEND & APP DEVELOPER.</p>
             {/* <p className="mt-4">Diligent and detail-oriented software engineer with strong expertise in identifying and resolving software discrepancies through rigorous testing and debugging.</p> */}
         </div>
     </section>
   )
 }
 
-export default Hero
+export default Hero;
