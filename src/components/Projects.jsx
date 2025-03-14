@@ -4,31 +4,31 @@ const Projects = () => {
   const projects = [
     {
       title: "E-Ferme App",
-      image: "src/assets/eferme.webp", // Replace with your image path
+      image: "public/static/images/eferme.webp", // Replace with your image path
       tech: "Flutter, Dart, Firebase, SQLite",
       description: "Developed a system to help farmers reduce resource wastage and increase crop yield with AI model integration."
     },
     {
       title: "Learning Management System",
-      image: "src/assets/elearning.jpg", // Replace with your image path
+      image: "public/static/images/elearning.jpg", // Replace with your image path
       tech: "C#, ASP.NET MVC, SQL Server",
       description: "Built a learning management system to make learning online more friendly and in one platform."
     },
     {
       title: "Walkie Talkie Application",
-      image: "src/assets/walkietalkie.avif", // Replace with your image path
+      image: "public/static/images/walkietalkie.avif", // Replace with your image path
       tech: "Flutter, Dart and Firebase",
       description: "Developed a mobile application that enables real time communication through a channel."
     },
     {
        title: "Distributed Chat Application",
-       image: "src/assets/chatapp.png", // Replace with your image path
+       image: "public/static/images/chatapp.png", // Replace with your image path
        tech: "C#, Dart, Flutter, SQL Server",
        description: "Developed a distributed system with one app and multiple servers synchronized to enable seamless chatting even when one of the servers is down."
     },
     {
       title: "Movie App",
-      image: "src/assets/movies.jpg", // Replace with your image path
+      image: "public/static/images/movies.jpg", // Replace with your image path
       tech: "C#, ASP.NET MVC, SQL Server",
       description: "Developed a mobile application that enables real time communication through a channel."
     }
