@@ -22,7 +22,7 @@ const Projects = () => {
       category: "backend",
       description: "A backend API for tracking personal and business expenses. Features include user authentication, expense categorization, reporting, and analytics to help users manage their finances efficiently.",
       githubUrl: "https://github.com/graham005/expense-tracker-NestJs",
-      liveUrl: "https://expense-tracker-nestjs-docker.onrender.com/"
+      liveUrl: "https://expense-tracker-nestjs-docker.onrender.com/api"
     },
     {
       title: "E-Ferme App",
