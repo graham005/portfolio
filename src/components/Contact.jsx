@@ -40,7 +40,6 @@ const Contact = () => {
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
       
-      // Reset status after 5 seconds
       setTimeout(() => {
         setSubmitStatus(null);
       }, 5000);
@@ -48,7 +47,6 @@ const Contact = () => {
       setSubmitStatus('error');
       console.error('Email sending failed:', error);
       
-      // Reset status after 5 seconds
       setTimeout(() => {
         setSubmitStatus(null);
       }, 5000);
@@ -58,15 +56,15 @@ const Contact = () => {
   };
   
   const contactInfo = [
-    { icon: FaMapMarkerAlt, text: "Nairobi, Kenya", color: "bg-red-500" },
-    { icon: FaEnvelope, text: "enochgraham003@outlook.com", color: "bg-blue-500" },
-    { icon: FaPhone, text: "+254 790 482 014", color: "bg-green-500" }
+    { icon: FaMapMarkerAlt, text: "Nairobi, Kenya", color: "bg-[#D97184]" },
+    { icon: FaEnvelope, text: "enochgraham003@outlook.com", color: "bg-[#2E9AA6]" },
+    { icon: FaPhone, text: "+254 790 482 014", color: "bg-[#F2B56B]" }
   ];
   
   const socialLinks = [
-    { icon: FaLinkedin, url: "https://www.linkedin.com/in/enoch-graham", color: "hover:bg-blue-600" },
-    { icon: FaGithub, url: "https://github.com/graham005", color: "hover:bg-gray-800" },
-    { icon: FaTwitter, url: "#", color: "hover:bg-blue-400" }
+    { icon: FaLinkedin, url: "https://www.linkedin.com/in/enoch-graham", color: "hover:bg-[#2E9AA6]" },
+    { icon: FaGithub, url: "https://github.com/graham005", color: "hover:bg-[#152840]" },
+    { icon: FaTwitter, url: "#", color: "hover:bg-[#4C428C]" }
   ];
   
   const containerVariants = {
@@ -92,10 +90,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-24 lg:py-32 text-white relative" style={{ backgroundColor: '#030014' }}>
+    <section id="contact" className="py-20 md:py-24 lg:py-32 text-white relative" style={{ backgroundColor: '#152840' }}>
       {/* Background glow effects */}
-      <div className="absolute top-0 left-1/4 w-80 h-80 bg-blue-500 rounded-full filter blur-[120px] opacity-10"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-purple-500 rounded-full filter blur-[120px] opacity-10"></div>
+      <div className="absolute top-0 left-1/4 w-80 h-80 bg-[#2E9AA6] rounded-full filter blur-[120px] opacity-10"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#4C428C] rounded-full filter blur-[120px] opacity-10"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -105,8 +103,8 @@ const Contact = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Get In Touch</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-6"></div>
+          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent">Get In Touch</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-xl mx-auto">Have a project in mind or want to collaborate? Feel free to reach out and I'll get back to you as soon as possible.</p>
         </motion.div>
         
@@ -148,7 +146,7 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 bg-gray-800 text-white rounded-full transition-colors duration-300 ${social.color}`}
+                      className={`p-3 bg-[#1a3a52] text-white rounded-full transition-colors duration-300 ${social.color}`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -165,7 +163,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 md:p-8 shadow-lg"
+            className="lg:col-span-2 bg-[#1a3a52]/50 backdrop-blur-sm border border-[#2E9AA6]/20 rounded-xl p-6 md:p-8 shadow-lg"
           >
             <form onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -178,7 +176,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white"
+                    className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white"
                     placeholder="John Doe"
                   />
                 </div>
@@ -191,7 +189,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white"
+                    className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -206,7 +204,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white"
+                  className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white"
                   placeholder="Project Inquiry"
                 />
               </div>
@@ -220,7 +218,7 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-white resize-none"
+                  className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 ></textarea>
               </div>
@@ -230,7 +228,7 @@ const Contact = () => {
                   type="submit"
                   disabled={isSubmitting}
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    isSubmitting ? 'bg-gray-600' : 'bg-gradient-to-r from-blue-500 to-purple-600 hover:shadow-lg hover:shadow-blue-500/20'
+                    isSubmitting ? 'bg-gray-600' : 'bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] hover:shadow-lg hover:shadow-[#2E9AA6]/20'
                   } flex items-center justify-center min-w-[150px]`}
                   whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}
@@ -250,7 +248,7 @@ const Contact = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
-                    className="ml-4 text-green-400 flex items-center"
+                    className="ml-4 text-[#F2B56B] flex items-center"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />

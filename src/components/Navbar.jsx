@@ -85,7 +85,7 @@ function Navbar() {
       variants={navbarVariants}
       className={`p-4 w-full z-50 ${
         isScrolled 
-          ? 'text-white backdrop-blur-lg bg-black/30 fixed top-0 shadow-lg shadow-blue-500/10' 
+          ? 'text-white backdrop-blur-lg bg-[#152840]/80 fixed top-0 shadow-lg shadow-[#2E9AA6]/10' 
           : 'text-white bg-transparent absolute top-0'
       }`}
     >
@@ -93,7 +93,7 @@ function Navbar() {
         <div className="flex justify-between items-center">
           <motion.div 
             variants={logoVariants}
-            className="font-bold text-2xl bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent"
+            className="font-bold text-2xl bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent"
           >
             Enoch Graham ._
           </motion.div>
@@ -105,11 +105,11 @@ function Navbar() {
                 key={index}
                 href={`#${link.id}`}
                 variants={itemVariants}
-                whileHover={{ scale: 1.1, color: "#60a5fa" }}
-                className="hover:text-blue-400 transition-colors duration-300 relative group"
+                whileHover={{ scale: 1.1, color: "#2E9AA6" }}
+                className="hover:text-[#2E9AA6] transition-colors duration-300 relative group"
               >
                 {link.text}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-full pr-1"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-[#2E9AA6] transition-all duration-300 group-hover:w-full pr-1"></span>
               </motion.a>
             ))}
           </div>
@@ -132,7 +132,7 @@ function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="md:hidden mt-4 bg-black/80 backdrop-blur-md rounded-lg p-4"
+              className="md:hidden mt-4 bg-[#152840]/90 backdrop-blur-md rounded-lg p-4"
             >
               <div className="flex flex-col space-y-4">
                 {navLinks.map((link, index) => (
@@ -140,7 +140,7 @@ function Navbar() {
                     key={index}
                     href={`#${link.id}`}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-white hover:text-blue-400 py-2 transition-colors duration-300"
+                    className="text-white hover:text-[#2E9AA6] py-2 transition-colors duration-300"
                   >
                     {link.text}
                   </a>

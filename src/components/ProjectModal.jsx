@@ -48,7 +48,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           onClick={onClose}
         >
           <motion.div 
-            className="bg-gray-900 border border-gray-800 rounded-xl w-full max-w-4xl overflow-hidden relative"
+            className="bg-[#1a3a52] border border-[#2E9AA6]/30 rounded-xl w-full max-w-4xl overflow-hidden relative"
             variants={modalVariants}
             initial="hidden"
             animate="visible"
@@ -57,7 +57,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           >
             <button 
               onClick={onClose}
-              className="absolute top-4 right-4 text-white bg-red-500/80 hover:bg-red-600 rounded-full w-10 h-10 flex items-center justify-center z-10 transition-colors duration-200"
+              className="absolute top-4 right-4 text-white bg-[#D97184]/80 hover:bg-[#D97184] rounded-full w-10 h-10 flex items-center justify-center z-10 transition-colors duration-200"
             >
               <FaTimes />
             </button>
@@ -68,10 +68,10 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 alt={project.title} 
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a3a52] via-transparent to-transparent"></div>
               <div className="absolute bottom-4 left-4">
                 <h2 className="text-3xl font-bold text-white mb-2">{project.title}</h2>
-                <span className="px-3 py-1 bg-blue-500/30 text-blue-300 rounded-full text-sm capitalize">
+                <span className="px-3 py-1 bg-[#2E9AA6]/30 text-[#2E9AA6] rounded-full text-sm capitalize">
                   {project.category}
                 </span>
               </div>
@@ -79,12 +79,12 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
             
             <div className="p-6">
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-3 text-blue-400">Technologies</h3>
+                <h3 className="text-lg font-semibold mb-3 text-[#2E9AA6]">Technologies</h3>
                 <div className="flex flex-wrap gap-2">
                   {project.tech.split(', ').map((tech, index) => (
                     <span 
                       key={index}
-                      className="px-4 py-1.5 bg-blue-500/20 text-blue-400 text-sm rounded-full"
+                      className="px-4 py-1.5 bg-[#2E9AA6]/20 text-[#2E9AA6] text-sm rounded-full"
                     >
                       {tech}
                     </span>
@@ -93,7 +93,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               </div>
               
               <div className="mb-6">
-                <h3 className="text-lg font-semibold mb-3 text-blue-400">Description</h3>
+                <h3 className="text-lg font-semibold mb-3 text-[#2E9AA6]">Description</h3>
                 <p className="text-gray-300 leading-relaxed">{project.description}</p>
               </div>
               
@@ -103,7 +103,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     href={project.githubUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium"
+                    className="flex items-center gap-2 px-6 py-3 bg-[#152840] hover:bg-[#1a3a52] text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium border border-[#2E9AA6]/30"
                   >
                     <FaGithub className="text-lg" /> 
                     View Code
@@ -114,7 +114,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                     href={project.liveUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium"
+                    className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] hover:from-[#2E9AA6]/90 hover:to-[#4C428C]/90 text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium"
                   >
                     <FaExternalLinkAlt className="text-lg" /> 
                     Live Demo

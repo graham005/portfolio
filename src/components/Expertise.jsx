@@ -8,25 +8,25 @@ function Expertise() {
       icon: FaLaptopCode,
       title: "Web Development",
       description: "Building responsive and interactive web applications using modern frameworks and technologies.",
-      color: "from-blue-500 to-cyan-400"
+      color: "from-[#2E9AA6] to-[#4C428C]"
     },
     {
       icon: FaMobileAlt,
       title: "Mobile Development",
       description: "Creating cross-platform mobile applications with Flutter and Dart for Android and iOS.",
-      color: "from-purple-500 to-pink-400"
+      color: "from-[#4C428C] to-[#D97184]"
     },
     {
       icon: FaDatabase,
       title: "Database Design",
       description: "Designing and implementing efficient database schemas and solutions for various applications.",
-      color: "from-yellow-400 to-orange-500"
+      color: "from-[#F2B56B] to-[#D97184]"
     },
     {
       icon: FaServer,
       title: "Backend Development",
       description: "Developing robust server-side applications using .NET, Python, and Node.js.",
-      color: "from-green-400 to-emerald-500"
+      color: "from-[#2E9AA6] to-[#F2B56B]"
     }
   ];
 
@@ -61,7 +61,7 @@ function Expertise() {
   };
 
   return (
-    <section id='expertise' className='py-20 md:py-24 lg:py-32 text-white' style={{ backgroundColor: '#030014' }}>
+    <section id='expertise' className='py-20 md:py-24 lg:py-32 text-white' style={{ backgroundColor: '#152840' }}>
       <div className='container mx-auto px-4'>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -70,8 +70,8 @@ function Expertise() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className='text-5xl font-bold mb-5 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>My Expertise</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          <h2 className='text-5xl font-bold mb-5 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent'>My Expertise</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] mx-auto"></div>
         </motion.div>
 
         <motion.div 
@@ -88,7 +88,7 @@ function Expertise() {
                 key={index}
                 variants={itemVariants}
                 whileHover="hover"
-                className='p-6 rounded-lg text-center bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/10'
+                className='p-6 rounded-lg text-center bg-[#1a3a52]/50 backdrop-blur-sm border border-[#2E9AA6]/20 hover:border-[#2E9AA6]/50 transition-all duration-300 shadow-lg hover:shadow-[#2E9AA6]/10'
               >
                 <div className="relative mx-auto mb-6 w-20 h-20 flex items-center justify-center">
                   <div className={`absolute inset-0 rounded-full bg-gradient-to-r ${item.color} opacity-20 blur-xl`}></div>

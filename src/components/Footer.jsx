@@ -25,7 +25,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative pt-20 pb-10 text-white" style={{ backgroundColor: '#030014' }}>
+    <footer className="relative pt-20 pb-10 text-white" style={{ backgroundColor: '#152840' }}>
       {/* Wavy Divider */}
       <div className="absolute top-0 left-0 right-0 overflow-hidden leading-none w-full">
         <svg 
@@ -33,7 +33,7 @@ const Footer = () => {
           xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 1200 120" 
           preserveAspectRatio="none"
-          className="w-full h-16 text-[#030014]"
+          className="w-full h-16 text-[#152840]"
           fill="currentColor"
         >
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"></path>
@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Enoch Graham</h3>
+            <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent">Enoch Graham</h3>
             <p className="text-gray-400 mb-6">Software engineer specializing in building exceptional digital experiences and applications.</p>
             
             <div className="flex space-x-4">
@@ -55,7 +55,7 @@ const Footer = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-blue-500 transition-colors duration-300"
+                    className="w-10 h-10 rounded-full bg-[#1a3a52] flex items-center justify-center text-white hover:bg-[#2E9AA6] transition-colors duration-300"
                     whileHover={{ y: -5 }}
                     whileTap={{ scale: 0.9 }}
                     aria-label={social.label}
@@ -74,7 +74,7 @@ const Footer = () => {
                 <li key={index}>
                   <a 
                     href={link.url} 
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 flex items-center"
+                    className="text-gray-400 hover:text-[#2E9AA6] transition-colors duration-300 flex items-center"
                   >
                     <span className="mr-2">›</span> {link.text}
                   </a>
@@ -99,11 +99,11 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white w-full"
+                className="px-4 py-2 bg-[#1a3a52] border border-[#2E9AA6]/30 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent text-white w-full"
               />
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-500 text-white rounded-r-lg hover:bg-blue-600 transition-colors duration-300"
+                className="px-4 py-2 bg-[#2E9AA6] text-white rounded-r-lg hover:bg-[#4C428C] transition-colors duration-300"
               >
                 Subscribe
               </button>
@@ -113,14 +113,14 @@ const Footer = () => {
         
         <motion.button
           onClick={scrollToTop}
-          className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-white absolute right-8 top-0 transform -translate-y-1/2 hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+          className="w-12 h-12 rounded-full bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] flex items-center justify-center text-white absolute right-8 top-0 transform -translate-y-1/2 hover:shadow-lg hover:shadow-[#2E9AA6]/30 transition-all duration-300"
           whileHover={{ y: -5 }}
           whileTap={{ scale: 0.9 }}
         >
           <FaArrowUp />
         </motion.button>
         
-        <div className="pt-6 mt-3 border-t border-gray-800 text-center">
+        <div className="pt-6 mt-3 border-t border-[#2E9AA6]/20 text-center">
           <p className="text-gray-400 flex items-center justify-center">
             © {new Date().getFullYear()} Enoch Graham.
           </p>

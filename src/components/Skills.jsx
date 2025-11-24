@@ -39,10 +39,10 @@ const Skills = () => {
 
 
   return (
-    <section id="skills" className="py-20 md:py-24 lg:py-32 text-white relative overflow-hidden" style={{ backgroundColor: '#030014' }}>
+    <section id="skills" className="py-20 md:py-24 lg:py-32 text-white relative overflow-hidden" style={{ backgroundColor: '#152840' }}>
       {/* Background glow effects */}
-      <div className="absolute -top-40 -left-40 w-80 h-80 bg-blue-500 rounded-full filter blur-[120px] opacity-20"></div>
-      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-purple-500 rounded-full filter blur-[120px] opacity-20"></div>
+      <div className="absolute -top-40 -left-40 w-80 h-80 bg-[#2E9AA6] rounded-full filter blur-[120px] opacity-20"></div>
+      <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-[#4C428C] rounded-full filter blur-[120px] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -52,8 +52,8 @@ const Skills = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">Skills & Technologies</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent">Skills & Technologies</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] mx-auto"></div>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -64,9 +64,9 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
-              className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl p-6 shadow-lg"
+              className="bg-[#1a3a52]/50 backdrop-blur-sm border border-[#2E9AA6]/20 rounded-xl p-6 shadow-lg"
             >
-              <h3 className="text-2xl font-bold mb-6 text-center text-blue-400">{category.name}</h3>
+              <h3 className="text-2xl font-bold mb-6 text-center text-[#2E9AA6]">{category.name}</h3>
               
               <div className="space-y-6">
                 {category.skills.map((skill, skillIndex) => (
@@ -83,9 +83,9 @@ const Skills = () => {
                       <span className="ml-auto text-sm text-gray-400">{skill.level}%</span>
                     </div>
                     
-                    <div className="h-2.5 w-full bg-gray-700 rounded-full overflow-hidden">
+                    <div className="h-2.5 w-full bg-gray-700/50 rounded-full overflow-hidden">
                       <motion.div 
-                        className="h-full rounded-full bg-gradient-to-r from-blue-500 to-purple-600"
+                        className="h-full rounded-full bg-gradient-to-r from-[#2E9AA6] to-[#4C428C]"
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
                         transition={{ duration: 1, delay: 0.1 * skillIndex }}
@@ -97,7 +97,7 @@ const Skills = () => {
                       <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        className="absolute left-0 right-0 -bottom-2 h-0.5 bg-gradient-to-r from-blue-500 to-purple-600"
+                        className="absolute left-0 right-0 -bottom-2 h-0.5 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C]"
                       />
                     )}
                   </motion.div>

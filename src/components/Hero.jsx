@@ -24,13 +24,13 @@ function Hero() {
 
   const socialLinks = [
     { icon: FaGithub, url: "https://github.com/graham005", color: "hover:text-gray-400" },
-    { icon: FaLinkedin, url: "https://www.linkedin.com/in/enoch-graham", color: "hover:text-blue-400" },
-    { icon: FaTwitter, url: "#", color: "hover:text-blue-500" },
+    { icon: FaLinkedin, url: "https://www.linkedin.com/in/enoch-graham", color: "hover:text-[#2E9AA6]" },
+    { icon: FaTwitter, url: "#", color: "hover:text-[#4C428C]" },
   ];
 
   return (
     <section id='hero' className='relative flex text-white justify-center items-center h-screen overflow-hidden' style={{ 
-      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #030014), url(${backgroundImage})`,
+      backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 0, 0.5), #152840), url(${backgroundImage})`,
       backgroundSize: 'cover',
       backgroundPosition: 'center',
     }}>
@@ -53,7 +53,7 @@ function Hero() {
               delay: 0.5 
             }}
           >
-            <div className="w-full h-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center text-3xl font-bold">
+            <div className="w-full h-full bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] flex items-center justify-center text-3xl font-bold">
               <img className='h-full w-full' src="/static/images/profile.png" alt="EG" />
             </div>
           </motion.div>
@@ -63,7 +63,7 @@ function Hero() {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className='font-bold mb-5 text-4xl md:text-6xl lg:text-8xl xl:text-[100px] leading-tight md:leading-snug lg:leading-normal xl:leading-[120px] bg-clip-text text-transparent bg-gradient-to-r from-white via-blue-200 to-purple-200'
+          className='font-bold mb-5 text-4xl md:text-6xl lg:text-8xl xl:text-[100px] leading-tight md:leading-snug lg:leading-normal xl:leading-[120px] bg-clip-text text-transparent bg-gradient-to-r from-white via-[#2E9AA6] to-[#D97184]'
           style={{ fontFamily: 'Poppins, sans-serif' }}
         >
           ENOCH GRAHAM
@@ -73,7 +73,7 @@ function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.5 }}
-          className='text-xl md:text-2xl lg:text-3xl bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'
+          className='text-xl md:text-2xl lg:text-3xl bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent'
           style={{ fontFamily: 'Roboto Mono, monospace' }}
         >
           I'M A <span ref={typedRef}></span>
@@ -87,15 +87,15 @@ function Hero() {
         >
           <a 
             href="#projects" 
-            className="relative overflow-hidden group bg-transparent border-2 border-blue-500 text-white px-8 py-3 rounded-full font-bold transition-all duration-300"
+            className="relative overflow-hidden group bg-transparent border-2 border-[#2E9AA6] text-white px-8 py-3 rounded-full font-bold transition-all duration-300"
           >
-            <span className="absolute top-0 left-0 w-full h-0 bg-gradient-to-r from-blue-500 to-purple-600 transition-all duration-300 group-hover:h-full -z-10"></span>
+            <span className="absolute top-0 left-0 w-full h-0 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] transition-all duration-300 group-hover:h-full -z-10"></span>
             View My Work
           </a>
           
           <a 
             href="#contact" 
-            className="relative overflow-hidden group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-blue-500/30 transition-all duration-300"
+            className="relative overflow-hidden group bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-[#2E9AA6]/30 transition-all duration-300"
           >
             Contact Me
           </a>

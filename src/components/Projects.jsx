@@ -94,10 +94,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 md:py-24 lg:py-32 text-white relative" style={{ backgroundColor: '#030014' }}>
+    <section id="projects" className="py-20 md:py-24 lg:py-32 text-white relative" style={{ backgroundColor: '#152840' }}>
       {/* Background glow effects */}
-      <div className="absolute top-40 right-40 w-80 h-80 bg-blue-500 rounded-full filter blur-[120px] opacity-20"></div>
-      <div className="absolute bottom-40 left-40 w-80 h-80 bg-purple-500 rounded-full filter blur-[120px] opacity-20"></div>
+      <div className="absolute top-40 right-40 w-80 h-80 bg-[#2E9AA6] rounded-full filter blur-[120px] opacity-20"></div>
+      <div className="absolute bottom-40 left-40 w-80 h-80 bg-[#4C428C] rounded-full filter blur-[120px] opacity-20"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -107,8 +107,8 @@ const Projects = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">My Projects</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto mb-8"></div>
+          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent">My Projects</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] mx-auto mb-8"></div>
         </motion.div>
 
         <motion.div 
@@ -123,7 +123,7 @@ const Projects = () => {
               key={index}
               variants={cardVariants}
               whileHover={{ y: -10 }}
-              className="group rounded-xl overflow-hidden cursor-pointer bg-gray-900/50 backdrop-blur-sm border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg hover:shadow-blue-500/10"
+              className="group rounded-xl overflow-hidden cursor-pointer bg-[#1a3a52]/50 backdrop-blur-sm border border-[#2E9AA6]/20 hover:border-[#2E9AA6]/50 transition-all duration-300 shadow-lg hover:shadow-[#2E9AA6]/10"
               onClick={() => setSelectedProject(project)}
             >
               <div className="relative overflow-hidden h-52">
@@ -132,7 +132,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <div className="absolute inset-0 bg-gradient-to-t from-[#152840] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
                   <div className="p-4 w-full">
                     <p className="text-sm text-gray-300">{project.tech}</p>
                   </div>
@@ -140,12 +140,12 @@ const Projects = () => {
               </div>
               
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors duration-300">{project.title}</h3>
+                <h3 className="text-xl font-bold mb-2 group-hover:text-[#2E9AA6] transition-colors duration-300">{project.title}</h3>
                 <p className="text-gray-400 line-clamp-2 mb-4">{project.description}</p>
                 
                 <div className="flex justify-between items-center">
-                  <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs capitalize">{project.category}</span>
-                  <button className="text-sm text-blue-400 hover:text-blue-300 transition-colors duration-300">
+                  <span className="px-3 py-1 bg-[#2E9AA6]/20 text-[#2E9AA6] rounded-full text-xs capitalize">{project.category}</span>
+                  <button className="text-sm text-[#2E9AA6] hover:text-[#F2B56B] transition-colors duration-300">
                     View Details
                   </button>
                 </div>
