@@ -99,15 +99,30 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
               
               <div className="flex flex-wrap gap-4">
                 {project.githubUrl && (
-                  <a 
-                    href={project.githubUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-6 py-3 bg-[#152840] hover:bg-[#1a3a52] text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium border border-[#2E9AA6]/30"
-                  >
-                    <FaGithub className="text-lg" /> 
-                    View Code
-                  </a>
+                  Array.isArray(project.githubUrl) ? (
+                    project.githubUrl.map((repo, index) => (
+                      <a 
+                        key={index}
+                        href={repo.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-2 px-6 py-3 bg-[#152840] hover:bg-[#1a3a52] text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium border border-[#2E9AA6]/30"
+                      >
+                        <FaGithub className="text-lg" /> 
+                        {repo.label}
+                      </a>
+                    ))
+                  ) : (
+                    <a 
+                      href={project.githubUrl} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-6 py-3 bg-[#152840] hover:bg-[#1a3a52] text-white rounded-lg transition-all duration-300 hover:scale-105 font-medium border border-[#2E9AA6]/30"
+                    >
+                      <FaGithub className="text-lg" /> 
+                      View Code
+                    </a>
+                  )
                 )}
                 {project.liveUrl && (
                   <a 

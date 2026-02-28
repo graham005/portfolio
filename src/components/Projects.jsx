@@ -7,6 +7,18 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Financial Management System",
+      image: "/static/images/financialmgmt.png",
+      tech: "Flutter, Dart, C#, .NET, SQL Server",
+      category: "desktop",
+      description: "A desktop financial management system for tracking income, expenses, budgets, and generating financial reports. Built with Flutter for the desktop UI and .NET for the backend API.",
+      githubUrl: [
+        { label: "Frontend", url: "https://github.com/graham005/Financial-Management-Frontend" },
+        { label: "Backend", url: "https://github.com/graham005/Financial-Management-Backend" }
+      ],
+      liveUrl: ""
+    },
+    {
       title: "MedDash",
       image: "/static/images/meddash.png",
       tech: "TypeScript, React, NestJs, PostgreSQL",
