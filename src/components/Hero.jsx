@@ -3,7 +3,8 @@ import backgroundImage from '../assets/images.jpg';
 import { motion } from 'framer-motion';
 import Typed from 'typed.js';
 import ParticleBackground from './ParticleBackground';
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from 'react-icons/fa';
+import cvFile from '../assets/Enoch Graham CV.pdf';
 
 function Hero() {
   const typedRef = useRef(null);
@@ -98,6 +99,15 @@ function Hero() {
             className="relative overflow-hidden group bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] text-white px-8 py-3 rounded-full font-bold hover:shadow-lg hover:shadow-[#2E9AA6]/30 transition-all duration-300"
           >
             Contact Me
+          </a>
+
+          <a
+            href={cvFile}
+            download="Enoch Graham CV.pdf"
+            className="relative overflow-hidden group bg-transparent border-2 border-[#F2B56B] text-white px-8 py-3 rounded-full font-bold transition-all duration-300 flex items-center gap-2"
+          >
+            <span className="absolute top-0 left-0 w-full h-0 bg-gradient-to-r from-[#F2B56B] to-[#D97184] transition-all duration-300 group-hover:h-full -z-10"></span>
+            <FaDownload /> Download CV
           </a>
         </motion.div>
         
