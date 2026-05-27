@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
@@ -56,15 +57,14 @@ const Contact = () => {
   };
   
   const contactInfo = [
-    { icon: FaMapMarkerAlt, text: "Nairobi, Kenya", color: "bg-[#D97184]" },
-    { icon: FaEnvelope, text: "enochgraham003@outlook.com", color: "bg-[#2E9AA6]" },
-    { icon: FaPhone, text: "+254 790 482 014", color: "bg-[#F2B56B]" }
+    { icon: FaMapMarkerAlt, text: "Nairobi, Kenya", color: "bg-[var(--muted)]" },
+    { icon: FaEnvelope, text: "enochgraham003@outlook.com", color: "bg-[var(--primary)]" },
+    { icon: FaPhone, text: "+254 790 482 014", color: "bg-[var(--accent)]" }
   ];
   
   const socialLinks = [
-    { icon: FaLinkedin, url: "https://www.linkedin.com/in/enoch-graham", color: "hover:bg-[#2E9AA6]" },
-    { icon: FaGithub, url: "https://github.com/graham005", color: "hover:bg-[#152840]" },
-    { icon: FaTwitter, url: "#", color: "hover:bg-[#4C428C]" }
+    { icon: FaLinkedin, url: "https://www.linkedin.com/in/enoch-graham", color: "hover:bg-[var(--primary)]" },
+    { icon: FaGithub, url: "https://github.com/graham005", color: "hover:bg-[var(--bg)]" },
   ];
   
   const containerVariants = {
@@ -90,31 +90,31 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-24 lg:py-32 text-white relative" style={{ backgroundColor: '#152840' }}>
+    <section id="contact" className="py-14 sm:py-20 md:py-24 lg:py-32 text-white relative" style={{ backgroundColor: 'var(--bg)' }}>
       {/* Background glow effects */}
-      <div className="absolute top-0 left-1/4 w-80 h-80 bg-[#2E9AA6] rounded-full filter blur-[120px] opacity-10"></div>
-      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[#4C428C] rounded-full filter blur-[120px] opacity-10"></div>
+      <div className="absolute top-0 left-1/4 w-80 h-80 bg-[var(--primary)] rounded-full filter blur-[120px] opacity-10"></div>
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-[var(--accent)] rounded-full filter blur-[120px] opacity-10"></div>
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-3 sm:px-4 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-5xl font-bold mb-5 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] bg-clip-text text-transparent">Get In Touch</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] mx-auto mb-6"></div>
+          <h2 className="text-3xl font-bold mb-4 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] bg-clip-text text-transparent sm:text-4xl lg:text-5xl">Get In Touch</h2>
+          <div className="w-20 h-1 bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] mx-auto mb-6"></div>
           <p className="text-gray-400 max-w-xl mx-auto">Have a project in mind or want to collaborate? Feel free to reach out and I'll get back to you as soon as possible.</p>
         </motion.div>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 sm:gap-10">
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="lg:col-span-1 space-y-8"
+            className="lg:col-span-1 space-y-6 sm:space-y-8"
           >
             {contactInfo.map((item, index) => {
               const Icon = item.icon;
@@ -146,7 +146,7 @@ const Contact = () => {
                       href={social.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`p-3 bg-[#1a3a52] text-white rounded-full transition-colors duration-300 ${social.color}`}
+                      className={`p-3 bg-[var(--muted)] text-white rounded-full transition-colors duration-300 ${social.color}`}
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
                     >
@@ -163,10 +163,10 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="lg:col-span-2 bg-[#1a3a52]/50 backdrop-blur-sm border border-[#2E9AA6]/20 rounded-xl p-6 md:p-8 shadow-lg"
+            className="lg:col-span-2 bg-[var(--muted)]/50 backdrop-blur-sm border border-[var(--primary)]/20 rounded-xl p-4 sm:p-6 md:p-8 shadow-lg"
           >
             <form onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">Your Name</label>
                   <input
@@ -176,7 +176,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white"
+                    className="w-full px-4 py-3 bg-[var(--bg)] border border-[var(--primary)]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-300 text-white"
                     placeholder="John Doe"
                   />
                 </div>
@@ -189,7 +189,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white"
+                    className="w-full px-4 py-3 bg-[var(--bg)] border border-[var(--primary)]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-300 text-white"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -204,7 +204,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white"
+                  className="w-full px-4 py-3 bg-[var(--bg)] border border-[var(--primary)]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-300 text-white"
                   placeholder="Project Inquiry"
                 />
               </div>
@@ -218,17 +218,17 @@ const Contact = () => {
                   onChange={handleChange}
                   required
                   rows="5"
-                  className="w-full px-4 py-3 bg-[#152840] border border-[#2E9AA6]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2E9AA6] focus:border-transparent transition-all duration-300 text-white resize-none"
+                  className="w-full px-4 py-3 bg-[var(--bg)] border border-[var(--primary)]/30 rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent transition-all duration-300 text-white resize-none"
                   placeholder="Hello, I'd like to talk about..."
                 ></textarea>
               </div>
               
-              <div className="flex items-center">
+              <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                 <motion.button
                   type="submit"
                   disabled={isSubmitting}
                   className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    isSubmitting ? 'bg-gray-600' : 'bg-gradient-to-r from-[#2E9AA6] to-[#4C428C] hover:shadow-lg hover:shadow-[#2E9AA6]/20'
+                    isSubmitting ? 'bg-gray-600' : 'bg-gradient-to-r from-[var(--primary)] to-[var(--accent)] hover:shadow-lg'
                   } flex items-center justify-center min-w-[150px]`}
                   whileHover={!isSubmitting ? { scale: 1.02 } : {}}
                   whileTap={!isSubmitting ? { scale: 0.98 } : {}}
@@ -248,7 +248,7 @@ const Contact = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
-                    className="ml-4 text-[#F2B56B] flex items-center"
+                    className="text-[var(--accent)] flex items-center sm:ml-4"
                   >
                     <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
