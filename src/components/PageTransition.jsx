@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Motion  } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 
 const VARIANTS = [
   {

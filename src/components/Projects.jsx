@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Motion } from 'framer-motion';
+import { motion as Motion } from 'framer-motion';
 import ProjectModal from './ProjectModal';
 
 const Projects = () => {
