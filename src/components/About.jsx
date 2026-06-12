@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { FaDownload } from 'react-icons/fa';
-import cvFile from '../assets/Enoch Graham CV.pdf';
+import cvFile from '../assets/Enoch_Graham_Software_Engineer_CV.pdf';
 
 export default function About() {
   const personal = {
