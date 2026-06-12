@@ -39,7 +39,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div 
+        <Motion.div 
           className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50 p-4 overflow-y-auto"
           variants={backdropVariants}
           initial="hidden"
@@ -47,7 +47,7 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
           exit="hidden"
           onClick={onClose}
         >
-          <motion.div 
+          <Motion.div 
             className="bg-[var(--muted)] border border-[var(--primary)]/30 rounded-xl w-full max-w-4xl overflow-hidden relative"
             variants={modalVariants}
             initial="hidden"
@@ -137,8 +137,8 @@ const ProjectModal = ({ project, isOpen, onClose }) => {
                 )}
               </div>
             </div>
-          </motion.div>
-        </motion.div>
+          </Motion.div>
+        </Motion.div>
       )}
     </AnimatePresence>
   );
